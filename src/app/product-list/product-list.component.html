@@ -1,0 +1,28 @@
+<br>
+<br>
+
+<div class="container">
+
+
+
+
+<div *ngFor="let product of products">
+
+  <h3>
+    <a [title]="product.name + ' details'" >
+      {{ product.name }}
+    </a>
+  </h3>
+  <p *ngIf="product.description">
+    Description: {{ product.description }} <br> <br> 
+    Posted by: {{ product.postedby }}
+  </p>
+  <button [routerLink]="['/dashboard']" class="bleon">
+    Click Here!
+  </button>
+
+</div>
+</div>
+<button [routerLink]="['/charts']" class="charts">
+  GO TO THE CHARTS!
+</button>
